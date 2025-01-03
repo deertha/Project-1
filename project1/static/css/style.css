@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Stylish font for Southern Spice */
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6347; /* Tomato color for a vibrant look */
+}
+
+/* Hover effect for the brand name */
+.navbar-brand:hover {
+    color: #ff4500; /* Darker tomato color on hover */
+    text-decoration: none; /* Removes underline */
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #f8f9fa; /* Light background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 10px 20px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #555555; /* Neutral gray */
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for nav links */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ff6347; /* Tomato color */
+    text-decoration: underline;
+}
+
+/* Button styles */
+.btnnnn {
+    background-color: #ff6347; /* Tomato color */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btnnnn a {
+    color: #ffffff; /* White text */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Hover effect for button */
+.btnnnn:hover {
+    background-color: #f5ae92; /* Darker tomato color */
+    
+}
+
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)); /* Linear gradient overlay */
+    z-index: 1;
+}
+
+.carousel-item img {
+    position: relative;
+    z-index: 0; /* Ensures the image is below the gradient */
+}
+
+.carousel-caption {
+    position: absolute;
+    z-index: 2; /* Ensures the caption is above the gradient */
+    background: none; /* Removes the background from the text */
+    padding: 40px;
+    bottom: 20%;
+}
+
+.carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff; /* White color for text */
+    text-shadow: none; /* Removes text shadow */
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: #f8f9fa; /* Light gray */
+    text-shadow: none; /* Removes text shadow */
+    margin-top: 10px;
+}
+
+/*form*/
+form {
+        background: #ffffff; /* White background for contrast */
+        padding: 30px; /* Add spacing inside the form */
+        margin: 20px auto; /* Center the form */
+        border: 1px solid #ddd !important; /* Subtle border */
+        border-radius: 10px; /* Rounded corners */
+        width: 100%;
+        max-width: 500px; /* Limit maximum width */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        font-family: 'Poppins', sans-serif; /* Consistent font */
+    }
+    
+
+    
+form label {
+        font-weight: bold; /* Emphasize labels */
+        color: #555555; /* Neutral gray color */
+        margin-bottom: 5px;
+        display: block; /* Place label above inputs */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+    
+form input,
+form button {
+        width: 100%; /* Full-width elements */
+        padding: 10px 15px; /* Add inner spacing */
+        margin-bottom: 20px; /* Spacing between elements */
+        border: 1px solid #ddd; /* Subtle border for inputs */
+        border-radius: 5px; /* Rounded corners */
+        font-size: 0.9rem; /* Adjust font size */
+        font-family: 'Poppins', sans-serif; /* Consistent font */
+    }
+    
+form input:focus {
+        border-color: #ff6347; /* Highlight input on focus */
+        outline: none; /* Remove default outline */
+        box-shadow: 0 0 5px rgba(255, 99, 71, 0.5); /* Add a glowing effect */
+    }
+    
+form button {
+        background-color: #ff6347; /* Tomato background color */
+        color: #ffffff; /* White text */
+        border: none; /* Remove default border */
+        font-weight: bold; /* Emphasize button text */
+        text-transform: uppercase; /* Capitalize button text */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s ease; /* Smooth transition */
+    }
+    
+form button:hover {
+        background-color: #ff4500; /* Darker tomato color on hover */
+    }
+    
+form .error {
+        color: #e74c3c; /* Red for errors */
+        font-weight: bold; /* Emphasize errors */
+        font-size: 0.9rem; /* Adjust error text size */
+        text-align: center; /* Center error text */
+    }
+    
+    /* Responsive Design */
+@media (max-width: 768px) {
+    form {
+         padding: 20px; /* Adjust padding for smaller screens */
+    }
+    
+    form h1 {
+        font-size: 1.8rem; /* Adjust title size for smaller screens */
+    }
+    
+    form input,
+    form button {
+           font-size: 0.85rem; /* Adjust font size for smaller screens */
+    }
+}
+    

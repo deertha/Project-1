@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section id="about" style="padding: 60px 20px; background-color: #FFF5EE; margin-top: 80px;">
+  <div class="container text-center">
+    <h2 style="font-size: 2.5rem; color: #8B4513; font-family: 'Dancing Script', cursive;">About Southern Spice</h2>
+    <div class="row align-items-center" style="margin-top: 40px;">
+      <div class="col-md-6">
+        <img src="{% static 'images/about.webp' %}" alt="About Southern Spice" 
+          style="height:450px;width: 450px; border-radius: 15px; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);">
+      </div>
+      <div class="col-md-6">
+        <p style="font-size: 1.2rem; color: #5A4231; line-height: 1.8; text-align: justify;">
+          Welcome to <span style="font-weight: bold; color: #D2691E;">Southern Spice</span>, where we bring the rich culinary heritage of the South straight to your plate. 
+          Our dishes are crafted with love, infused with bold spices, and prepared using timeless recipes that honor tradition and taste.
+        </p>
+        <p style="font-size: 1.2rem; color: #5A4231; line-height: 1.8; text-align: justify;">
+          From savoring the warmth of traditional spices to indulging in modern culinary creations, every meal at Southern Spice is an unforgettable experience. 
+          Come and explore the fusion of culture, flavors, and passion that defines who we are.
+        </p>
+        <a href="{% url 'menu' %}" class="btn btn-warning" 
+          style="background-color: #D2691E; border: none; padding: 10px 20px; font-size: 1rem; margin-top: 15px;">
+          Explore Our Menu
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

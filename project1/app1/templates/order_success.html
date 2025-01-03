@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+    <h1>Order Placed Successfully!</h1>
+    <p>Thank you for your order. We will contact you soon!</p>
+    <a href="{% url 'place_order' %}">Place another order</a>
+
+{% endblock %}

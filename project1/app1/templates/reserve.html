@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+ h1 {
+    font-family: 'Dancing Script', cursive; /* Signature font */
+    padding-top: 30px;
+    font-size: 2rem; /* Standard font size */
+    text-align: center; /* Center align */
+    color:rgb(252, 102, 2); /* Neutral dark color for readability */
+    margin-bottom: 20px; /* Spacing below the title */
+    font-weight: normal; /* Standard weight for a more subtle look */
+}
+</style>
+
+<h1>Reserve a Table at Southern Spice</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Reserve</button>
+</form>
+
+{% if success_message %}
+    <script type="text/javascript">
+        Swal.fire({
+            title: 'Reservation Successful!',
+            text: "{{ success_message }}",
+            icon: 'success',
+            confirmButtonText: 'Okay'
+        });
+    </script>
+{% endif %}
+
+{% if error %}
+    <p style="color: red;">{{ error }}</p>
+{% endif %}
+
+{% endblock %}
